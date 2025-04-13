@@ -82,6 +82,8 @@ Este projeto foi desenvolvido como parte do meu aprendizado na plataforma **DIO 
 ./mvnw spring-boot:run
 ```
 
+4. Utilize o arquivo de coleção do Postman disponível na raiz do projeto para testar as rotas da API
+
 ### Front-end (em breve):
 1. Acesse a pasta frontend
 
