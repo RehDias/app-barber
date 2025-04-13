@@ -1,5 +1,6 @@
 package com.barber.shop.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,10 +32,12 @@ public class Appointment {
 
   @ManyToOne
   @JoinColumn(name = "customer_id")
+  @JsonBackReference
   private Customer customer;
 
   @ManyToOne
   @JoinColumn(name = "barber_work_id")
+  @JsonBackReference
   private BarberWork barberWork;
 
   public Appointment(LocalDateTime dateTime, String notes) {

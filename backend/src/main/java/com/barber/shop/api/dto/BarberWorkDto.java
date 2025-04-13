@@ -7,18 +7,14 @@ public record BarberWorkDto(
     Long id,
     String name,
     Double price,
-    String duration,
-    List<AppointmentDto> appointments
+    String duration
     ) {
   public static BarberWorkDto fromEntity(BarberWork barberWork) {
     return new BarberWorkDto(
         barberWork.getId(),
         barberWork.getName(),
         barberWork.getPrice(),
-        barberWork.getDuration(),
-        barberWork.getAppointments() != null
-        ? barberWork.getAppointments() .stream().map(AppointmentDto::fromEntity).toList()
-            : List.of()
+        barberWork.getDuration()
     );
   }
 }

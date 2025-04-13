@@ -7,18 +7,14 @@ public record CustomerDto(
     Long id,
     String name,
     String phone,
-    String email,
-    List<AppointmentDto> appointments
+    String email
     ) {
   public static CustomerDto fromEntity(Customer customer) {
     return new CustomerDto(
         customer.getId(),
         customer.getName(),
         customer.getPhone(),
-        customer.getEmail(),
-        customer.getAppointments() != null
-            ? customer.getAppointments() .stream().map(AppointmentDto::fromEntity).toList()
-            : List.of()
+        customer.getEmail()
     );
   }
 }

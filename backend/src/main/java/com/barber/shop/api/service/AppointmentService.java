@@ -71,9 +71,9 @@ public class AppointmentService {
   public Appointment removeCustomer(Long id) throws AppointmentNotFoundException {
     Appointment appointment = findById(id);
 
-    appointment.setCustomer(null);
+    appointmentRepository.deleteById(id);
 
-    return appointmentRepository.save(appointment);
+    return appointment;
   }
 
   public Appointment setBarberWork(Long appointmentId, Long barberWorkId)

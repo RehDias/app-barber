@@ -1,5 +1,6 @@
 package com.barber.shop.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,6 +33,7 @@ public class BarberWork {
   private String duration;
 
   @OneToMany(mappedBy = "barberWork")
+  @JsonManagedReference
   private List<Appointment> appointments;
 
   public BarberWork(String name, Double price, String duration) {
