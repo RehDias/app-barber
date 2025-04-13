@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: 'postgres:alpine'
+    restart: always
+    environment:
+      - 'POSTGRES_DB=barber_shop_db'
+      - 'POSTGRES_PASSWORD=postgres'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '5432:5432'
