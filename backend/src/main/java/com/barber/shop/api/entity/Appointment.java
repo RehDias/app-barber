@@ -36,4 +36,9 @@ public class Appointment {
   @ManyToOne
   @JoinColumn(name = "barber_work_id")
   private BarberWork barberWork;
+
+  public Appointment(LocalDateTime dateTime, String notes) {
+    this.dateTime = dateTime;
+    this.notes = notes;
+  }
 }

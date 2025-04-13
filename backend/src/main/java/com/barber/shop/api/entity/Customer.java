@@ -40,4 +40,10 @@ public class Customer {
 
   @OneToMany(mappedBy = "customer")
   private List<Appointment> appointments;
+
+  public Customer(String name, String phone, String email) {
+    this.name = name;
+    this.phone = phone;
+    this.email = email;
+  }
 }

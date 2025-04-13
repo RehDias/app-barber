@@ -33,4 +33,10 @@ public class BarberWork {
 
   @OneToMany(mappedBy = "barberWork")
   private List<Appointment> appointments;
+
+  public BarberWork(String name, Double price, String duration) {
+    this.name = name;
+    this.price = price;
+    this.duration = duration;
+  }
 }
